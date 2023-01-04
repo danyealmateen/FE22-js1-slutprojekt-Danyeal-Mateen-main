@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="anime.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>FLICKR Project</title>
+  </head>
+  <body>
+    <!-- Random facts divven -->
+    <div class="counter-container">
+        <div class="counter" data-target="60000000">60000000</div>
+        <span>This is how many active users FLICKR has. Congratulations, you will now join them!</span>
+        </div>
+    
+    <!-- Formen innehållandes alla inputfält, knappar, headers    -->
+    <form id="form">
+        <!-- Inputfälten+knappen för att söka samt ange hur många bilder som ska visas -->
+      <input type="text" id="inputText" placeholder="Search..." />
+      <input type="number" id="inputNumber" placeholder="Number of img's..." />
+      <br>
+      
+      
+      <!-- Paragrafen som animeras -->
+      <div id="animeDiv"></div>
+
+     <!-- Checkboxarna för bildstorlekarna -->
+      <h3>Image sizes:</h3>
+      <div id="sorting-sizes">
+        <label>Small</label>
+        <input id="checkboxSmall" type="checkbox" />
+        <br />
+        <label>Medium</label>
+        <input id="checkboxMedium" type="checkbox" />
+        <br />
+        <label>Large</label>
+        <input id="checkboxLarge" type="checkbox" />
+      </div>
+
+      <!-- Listan där man kan välja att sortera efter datum, "interestingness" samt relevans -->
+      <h3>Sort by:</h3>
+        <input id="inputSorting" list="sortings" name="myBrowser" placeholder="Sort by..."/></label>
+      <datalist id="sortings">
+        <option value="Date posted"></option>
+        <option value="Interestingness"></option>
+        <option value="Relevance"></option>
+      </datalist>
+      <br>
+      <button id="button">Search</button>
+      <button id="randomButton">Random</button>
+    </form>
+    <div id="divForThePictures"></div>
+    <div id="error-message-container"></div>
+  </body>
+</html>
